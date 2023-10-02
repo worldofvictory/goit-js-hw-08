@@ -1,7 +1,13 @@
+import '../css/common.css';
+import '../css/03-feedback.css';
+import throttle from 'lodash.throttle';
+
+
 const LOCAL_KEY = 'feedback-form-state';
 
 const form = document.querySelector('.feedback-form');
-
+const input = document.querySelector('.email')
+const submit = document.querySelector ('.submit')
 form.addEventListener( input, throttle(onInputData, 500));
 form.addEventListener( submit, onFormSubmit);
 
